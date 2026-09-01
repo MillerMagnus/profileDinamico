@@ -31,7 +31,7 @@ botaoAtualizar.addEventListener(
             mensagem.textContent = "digite um nome antes de atualizar.";
 
             return;
-        }
+        } else {
 
         nomePerfil.textContent = 
         campoNome.value;
@@ -40,11 +40,11 @@ botaoAtualizar.addEventListener(
         "desenvolvedor(a) Web";
 
         perfil.classList.add(
-            "atualizado"    
+            ".atualizado"    
         );
         mensagem.textContent =
         "perfil atualizado com sucesso!";
-
+    }
     }
 );
 
@@ -59,8 +59,8 @@ botaoTema.addEventListener(
     function () {
 
         document.body
-        .classList.
-        toggle("tema-escuro");
+        .classList
+        .toggle("tema-escuro");
     }   
 );
 
@@ -75,12 +75,20 @@ campoNome.addEventListener(
     }
 );
 
+//campoNome.addEventListener(
+//    "focus",
+//    function () {
+//
+//        campoNome.style.border =
+//        "1px solid #0011ff";
+//    }
+//);
+
 campoNome.addEventListener(
     "focus",
     function () {
 
-        campoNome.style.border =
-        "2px solid #0011ff";
+        campoNome.classList.add("campo-ativo");
     }
 );
 
@@ -88,7 +96,8 @@ campoNome.addEventListener(
     "blur",
     function () {
 
-        campoNome.style.border =
-        "1px solid #3a3a3a";
+        campoNome.classList.remove("campo-ativo");
     }
 );
+
+campoNome.classList.add("campo-ativo");

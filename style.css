@@ -1,6 +1,7 @@
 body {
 font-family: Arial, sans-serif;
 background-color: #f2f2f2;
+height: 90vh;
 }
 main {
 display: flex;
@@ -10,7 +11,7 @@ padding: 40px;
 .perfil {
 width: 320px;
 padding: 25px;
-background-color: white;
+/*  background-color: white;  */
 border-radius: 12px;
 text-align: center;
 }
@@ -30,9 +31,15 @@ margin: 5px;
 
 .atualizado {
 background-color: green;
-color: white;
+color: rgb(107, 100, 100);
 }
 .tema-escuro {
 background-color: #111;
-color: white;
+color: rgb(99, 89, 89);
+background-image: linear-gradient(0deg, #000000 0%,rgb(59, 59, 59) 74%,black 100%);
+}
+
+
+.campo-ativo {
+border: 5px solid #92bfdd;
 }
